@@ -32,6 +32,8 @@ namespace Conversation_API
 
             services.AddSwaggerGen();
 
+            services.AddSingleton<IConfigurationRoot>(Configuration);
+
             services.ConfigureSwaggerGen(options => {
                 options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info {
                     Version = "v1",
